@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Launch Tomorrow — High‑Converting Websites in 24 Hours</title>
+<meta name="description" content="Outcome‑focused website + custom domain in 24 hours. Competitive price. Pay after you see it.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{ --bg:#050813; --bg2:#081128; --fg:#ecf2ff; --muted:#a7b6d6; --brand:#7c5cff; --accent:#22d3ee; --glass:rgba(255,255,255,.06); --border:rgba(255,255,255,.12); --radius:18px; --shadow:0 30px 80px rgba(0,0,0,.6); }
+*{box-sizing:border-box} html,body{margin:0;padding:0;scroll-behavior:smooth;background:var(--bg);color:var(--fg);font-family:Sora,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+a{color:var(--accent);text-decoration:none} img{max-width:100%;display:block}
+.container{width:min(1200px,92vw);margin:0 auto}
+nav.top{position:sticky;top:0;z-index:50;background:rgba(5,8,19,.55);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:12px 0}
+.brand{font-weight:800;letter-spacing:.6px}
+.nav-links a{padding:10px 12px;border-radius:12px;transition:background .2s}
+.nav-links a:hover{background:var(--glass)}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 18px;border-radius:16px;border:1px solid var(--border);cursor:pointer;transition:transform .18s,box-shadow .18s,background .18s}
+.btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;box-shadow:var(--shadow)}
+.btn.secondary{background:rgba(255,255,255,.08);color:var(--fg)}
+.btn:hover{transform:translateY(-3px)}
+.magnet{position:relative;isolation:isolate;overflow:hidden}
+.magnet::after{content:"";position:absolute;inset:-20%;background:radial-gradient(600px 200px at var(--mx,50%) var(--my,50%),rgba(255,255,255,.12),transparent 40%);z-index:-1;transition:opacity .2s;opacity:.6}
+.section{padding:100px 0;border-top:1px solid var(--border)}
+.section h2{font-size:clamp(28px,4vw,48px);margin:0 0 12px}
+.lead{color:var(--muted);max-width:860px}
+.alt{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,.01))}
+.hero{position:relative;min-height:92svh;display:grid;place-items:center;overflow:hidden}
+#gl{position:absolute;inset:0;z-index:-2}
+.hero-inner{padding:120px 0;text-align:center}
+.badge{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(124,92,255,.15);color:#d9d1ff;font-size:12px;letter-spacing:.3px}
+h1.hero-title{font-size:clamp(40px,7.5vw,100px);line-height:1.02;margin:14px 0;background:linear-gradient(135deg,#fff,#c7d2fe 30%,#67e8f9 70%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{font-size:clamp(16px,2.1vw,22px);color:var(--muted);max-width:900px;margin:0 auto 24px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.price-pill{display:inline-flex;gap:8px;align-items:center;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:rgba(34,197,94,.15);color:#b5f3c8;font-size:12px}
+.grid{display:grid;gap:20px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid var(--border);border-radius:var(--radius);padding:18px;position:relative;overflow:hidden;box-shadow:var(--shadow);transform-style:preserve-3d}
+.card::after{content:"";position:absolute;inset:-1px;border-radius:var(--radius);padding:1px;background:linear-gradient(135deg,rgba(124,92,255,.45),rgba(34,211,238,.3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+.card h3{margin:6px 0 6px} .card p{margin:0;color:var(--muted)}
+.timeline{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:16px}
+.step{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:16px;position:relative}
+.step::before{content:attr(data-step);position:absolute;top:-10px;left:-10px;background:linear-gradient(135deg,var(--brand),var(--accent));color:#fff;border-radius:999px;padding:8px 10px;font-size:12px;box-shadow:var(--shadow)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.tile{position:relative;border-radius:18px;overflow:hidden;border:1px solid var(--border);background:rgba(255,255,255,.04);box-shadow:var(--shadow);transition:transform .2s}
+.tile img{width:100%;height:200px;object-fit:cover;opacity:.92;filter:saturate(1.15) contrast(1.05)}
+.tile .meta{position:absolute;left:10px;bottom:10px;background:rgba(0,0,0,.35);backdrop-filter:blur(4px);padding:8px 10px;border-radius:12px;font-size:12px}
+.tile:hover{transform:translateY(-6px)}
+.accordion{display:grid;gap:12px} .item{background:var(--bg2);border:1px solid var(--border);border-radius:14px;overflow:hidden}
+.trigger{width:100%;text-align:left;background:transparent;border:0;color:var(--fg);padding:16px;font-size:16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer}
+.content{padding:0 16px 16px;display:none;color:var(--muted)} .item.open .content{display:block}
+.field{display:grid;gap:6px;margin:10px 0}
+.field input, .field textarea{background:#0c142a;border:1px solid var(--border);border-radius:12px;padding:12px 14px;color:var(--fg)}
+.field input:focus, .field textarea:focus{outline:2px solid rgba(124,92,255,.4)}
+footer{border-top:1px solid var(--border);padding:36px 0 60px;color:#9fb0d2}
+.reveal{opacity:0;transform:translateY(22px) scale(.98);transition:opacity .7s, transform .7s cubic-bezier(.2,.7,.2,1)}
+.reveal.in{opacity:1;transform:none}
+@media (max-width:720px){ nav .nav-links{display:none} }
+</style>
+</head>
+<body>
+<canvas id="gl"></canvas>
+<nav class="top">
+  <div class="container wrap">
+    <div class="brand">Launch<span style="color:var(--accent)">Tomorrow</span></div>
+    <div class="nav-links">
+      <a href="#outcomes">Outcomes</a>
+      <a href="#process">Process</a>
+      <a href="#work">Work</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a class="btn secondary magnet" href="#contact">Get Quote</a>
+  </div>
+</nav>
+
+<header class="hero" id="home">
+  <div class="hero-inner container">
+    <span class="badge reveal">Website + Custom Domain • Launch in 24 hours • Competitive price</span>
+    <h1 class="hero-title reveal">Get more customers in <em>24 hours</em>.</h1>
+    <p class="hero-sub reveal">You don’t want a “website.” You want calls, bookings, and sales. We build that — and you pay only <em>after</em> you’ve seen it.</p>
+    <div class="cta">
+      <a class="btn primary magnet reveal" href="#contact">Start now</a>
+      <span class="price-pill reveal">Competitive price • SSL included</span>
+    </div>
+    <p class="hero-sub" style="margin-top:14px">You’ll get a site as good as this — modern, fast, and packed with micro‑interactions.</p>
+  </div>
+</header>
+
+<section id="outcomes" class="section alt">
+  <div class="container">
+    <h2 class="reveal">What you actually get</h2>
+    <p class="lead reveal">Outcome‑first builds: clear services, bold CTAs, and instant contact options wired for conversions.</p>
+    <div class="grid cards">
+      <div class="card reveal"><h3>More Calls, More Jobs</h3><p>Click‑to‑call & WhatsApp are front‑and‑center so prospects talk to you now.</p></div>
+      <div class="card reveal"><h3>Book More Work</h3><p>Clear service list and trust placements make it effortless to request a quote.</p></div>
+      <div class="card reveal"><h3>Local SEO Basics</h3><p>Fast, clean structure that supports Google visibility in your area.</p></div>
+      <div class="card reveal"><h3>Own Your Domain</h3><p>We set up your custom domain + SSL so you look professional instantly.</p></div>
+    </div>
+
+    <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:22px">
+      <div class="card kpi reveal"><div class="num" data-target="24" style="font-size:34px;font-weight:800">0h</div><div class="cap">Turnaround — launch in 24h</div></div>
+      <div class="card kpi reveal"><div class="num" data-target="90" style="font-size:34px;font-weight:800">0+</div><div class="cap">Mobile speed score</div></div>
+      <div class="card kpi reveal"><div class="num" data-target="3" style="font-size:34px;font-weight:800">0x</div><div class="cap">More enquiries*</div></div>
+    </div>
+    <p class="lead" style="margin-top:6px">*Depends on niche/traffic. We wire your site for calls, quotes, and WhatsApp — not just views.</p>
+  </div>
+</section>
+
+<section id="process" class="section">
+  <div class="container">
+    <h2 class="reveal">24‑hour launch, zero hassle</h2>
+    <p class="lead reveal">You talk, we build, you go live tomorrow. Website + custom domain — that’s the offer.</p>
+    <div class="timeline">
+      <div class="step reveal" data-step="1">15‑min brief. Tell us your niche, services, and contact details.</div>
+      <div class="step reveal" data-step="2">Design in 6–12h. Copy, imagery, and CTAs done‑for‑you.</div>
+      <div class="step reveal" data-step="3">Domain wired. Calls, WhatsApp, forms, basic analytics.</div>
+      <div class="step reveal" data-step="4">Launch in 24h. You pay after you’ve seen it.</div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section alt">
+  <div class="container">
+    <h2 class="reveal">Clean, fast, high‑impact</h2>
+    <p class="lead reveal">A small curated showcase to spark ideas. You’ll get a site as good as this.</p>
+    <div class="gallery">
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style1/900/600" alt="Style 1" loading="lazy"/><div class="meta">Style 1</div></div>
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style2/900/600" alt="Style 2" loading="lazy"/><div class="meta">Style 2</div></div>
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style3/900/600" alt="Style 3" loading="lazy"/><div class="meta">Style 3</div></div>
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style4/900/600" alt="Style 4" loading="lazy"/><div class="meta">Style 4</div></div>
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style5/900/600" alt="Style 5" loading="lazy"/><div class="meta">Style 5</div></div>
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style6/900/600" alt="Style 6" loading="lazy"/><div class="meta">Style 6</div></div>
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style7/900/600" alt="Style 7" loading="lazy"/><div class="meta">Style 7</div></div>
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style8/900/600" alt="Style 8" loading="lazy"/><div class="meta">Style 8</div></div>
+      <div class="tile reveal"><img src="https://picsum.photos/seed/style9/900/600" alt="Style 9" loading="lazy"/><div class="meta">Style 9</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <div class="container">
+    <h2 class="reveal">FAQ</h2>
+    <div class="accordion" id="faqAcc">
+      <div class="item reveal"><button class="trigger"><span>What exactly do you deliver?</span><span>+</span></button><div class="content">A modern, high‑converting website and a custom domain — that’s it. No extras you don’t need.</div></div>
+      <div class="item reveal"><button class="trigger"><span>How fast is the 24‑hour launch?</span><span>+</span></button><div class="content">Your core one‑page ‘money site’ goes live within 24 hours of your brief.</div></div>
+      <div class="item reveal"><button class="trigger"><span>When do I pay?</span><span>+</span></button><div class="content">After you see the finished website. Simple.</div></div>
+      <div class="item reveal"><button class="trigger"><span>Is the price competitive?</span><span>+</span></button><div class="content">Yes. You get the same quality as this site at a very competitive price.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section alt">
+  <div class="container">
+    <h2 class="reveal">Let’s launch tomorrow</h2>
+    <p class="lead reveal">Fill this in — we’ll reply fast and confirm your 24‑hour slot. Pay after you see your site.</p>
+    <form id="contactForm" class="reveal" onsubmit="return handleSubmit(event)">
+      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px">
+        <div class="field"><label>Name</label><input required placeholder="Jane Doe"></div>
+        <div class="field"><label>Email</label><input type="email" required placeholder="jane@example.com"></div>
+        <div class="field"><label>Phone / WhatsApp</label><input placeholder="+44 7xxx xxx xxx"></div>
+        <div class="field"><label>Business / Niche</label><input placeholder="Plumber in Liverpool"></div>
+      </div>
+      <div class="field"><label>Project</label><textarea rows="5" required placeholder="Services, service area, domain if you have one"></textarea></div>
+      <div class="cta">
+        <button class="btn primary magnet">Reserve 24‑hour build</button>
+        <a class="btn secondary magnet" target="_blank" rel="noopener" href="https://wa.me/447000000000">WhatsApp</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer class="container">
+  <div>© <span id="year"></span> LaunchTomorrow — Website + Custom Domain • Competitive price • Pay after you see it.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+// Smooth scroll offset fix
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click', e=>{
+  const id=a.getAttribute('href'); const el=document.querySelector(id);
+  if(el){ e.preventDefault(); window.scrollTo({top: el.offsetTop-70, behavior:'smooth'}); }
+}));
+function handleSubmit(e){ e.preventDefault(); alert('Thanks! We will reply shortly.'); return false; }
+// Intersection reveal
+const io = new IntersectionObserver((entries)=>{ entries.forEach(en=>{ if(en.isIntersecting) en.target.classList.add('in'); }); },{threshold:.12, rootMargin:'0px 0px -10% 0px'});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// Magnetic buttons
+document.querySelectorAll('.magnet').forEach(btn=>{
+  btn.addEventListener('mousemove', (e)=>{
+    const r = btn.getBoundingClientRect();
+    const mx = (e.clientX - r.left)/r.width*100;
+    const my = (e.clientY - r.top)/r.height*100;
+    btn.style.setProperty('--mx', mx+'%');
+    btn.style.setProperty('--my', my+'%');
+    btn.style.transform = 'translateY(-3px)';
+  });
+  btn.addEventListener('mouseleave', ()=>{ btn.style.transform=''; });
+});
+// Tilt on cards/tiles
+document.addEventListener('mousemove',(e)=>{
+  document.querySelectorAll('.card,.tile').forEach((card)=>{
+    const r=card.getBoundingClientRect();
+    const cx=e.clientX-r.left, cy=e.clientY-r.top;
+    const rx=((cy/r.height)-.5)*-6, ry=((cx/r.width)-.5)*6;
+    card.style.transform = 'perspective(900px) rotateX('+rx+'deg) rotateY('+ry+'deg)';
+  });
+});
+// Accordion
+document.getElementById('faqAcc').addEventListener('click',(e)=>{
+  const t=e.target.closest('.trigger'); if(!t) return;
+  const item=t.parentElement; item.classList.toggle('open');
+});
+// WebGL background
+try{
+  const canvas = document.getElementById('gl');
+  const renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true, alpha:true});
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(60, innerWidth/innerHeight, 0.1, 1000);
+  camera.position.z = 5;
+  function onResize(){ renderer.setSize(innerWidth, innerHeight); camera.aspect = innerWidth/innerHeight; camera.updateProjectionMatrix(); }
+  addEventListener('resize', onResize); onResize();
+
+  const geo = new THREE.PlaneGeometry(12, 8, 1, 1);
+  const mat = new THREE.ShaderMaterial({
+    uniforms:{ u_time:{value:0.0}, u_a:{value:new THREE.Color(0x7c5cff)}, u_b:{value:new THREE.Color(0x22d3ee)} },
+    vertexShader:`varying vec2 vUv; void main(){ vUv=uv; gl_Position = projectionMatrix*modelViewMatrix*vec4(position,1.0); }`,
+    fragmentShader:`precision highp float; varying vec2 vUv; uniform float u_time; uniform vec3 u_a; uniform vec3 u_b;
+      float hash(vec2 p){ return fract(sin(dot(p, vec2(127.1,311.7)))*43758.5453123); }
+      float noise(in vec2 p){ vec2 i=floor(p); vec2 f=fract(p); float a=hash(i); float b=hash(i+vec2(1.,0.)); float c=hash(i+vec2(0.,1.)); float d=hash(i+vec2(1.,1.)); vec2 u=f*f*(3.0-2.0*f); return mix(a,b,u.x)+ (c-a)*u.y*(1.0-u.x) + (d-b)*u.x*u.y; }
+      void main(){
+        vec2 uv = vUv*3.0;
+        float t = u_time*0.05;
+        float n = noise(uv + t) + 0.5*noise(uv*2.0 - t*1.3);
+        vec3 col = mix(u_a, u_b, smoothstep(0.2,0.9,n));
+        gl_FragColor = vec4(col, .45);
+      }`,
+    transparent:true
+  });
+  const plane = new THREE.Mesh(geo, mat);
+  plane.position.z = -2.5;
+  scene.add(plane);
+
+  const COUNT = 1400;
+  const positions = new Float32Array(COUNT*3);
+  for(let i=0;i<COUNT;i++){ positions[i*3]=(Math.random()-0.5)*20; positions[i*3+1]=(Math.random()-0.5)*10; positions[i*3+2]=(Math.random()-0.5)*20; }
+  const pgeo = new THREE.BufferGeometry();
+  pgeo.setAttribute('position', new THREE.BufferAttribute(positions,3));
+  const pm = new THREE.PointsMaterial({color:0x7c5cff, size:0.02, transparent:true, opacity:.85});
+  const pts = new THREE.Points(pgeo, pm);
+  scene.add(pts);
+
+  let t=0;
+  (function animate(){
+    requestAnimationFrame(animate);
+    t+=0.016;
+    mat.uniforms.u_time.value = t*60.0;
+    pts.rotation.y += 0.0015;
+    pts.rotation.x = Math.sin(t*0.3)*0.2;
+    renderer.render(scene, camera);
+  })();
+}catch(err){}
+</script>
+</body>
+</html>
